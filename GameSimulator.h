@@ -10,14 +10,25 @@ class GameSimulator {
 private:
 	PlayerContainer players;
 	SimulationLog log;
-	IOHandler inteface;
+	IOHandler interface;
 	size_t simulationNumber;
-public:
-	GameSimulator() : simulationNumber(0) {}
-	void simulation();
+
 	void simulateMatches(Player* playerOne, Player* Two);
 	void initPlayersFromUser();
 	void playMatch(Player* playerOne, Player* Two);
+
+public:
+	GameSimulator() : simulationNumber(0), interface(players,log) {}
+
+	/*
+	 *	Elõkészíti a példányosított objektumot a szimulációk leutátásra.
+	 *	@param - nincs
+	 *	@return - void
+	 */
+	void getParameters();
+
+	void simulation();
+	void displayResults();
 	~GameSimulator() {}
 };
 
