@@ -6,18 +6,11 @@
 
 class IOHandler {
 private:
-	PlayerContainer& container;
-	SimulationLog& log;
+	PlayerContainer* container;
+	SimulationLog* log;
 public:
-	IOHandler(PlayerContainer& newContainer, SimulationLog& newLog) : container(newContainer), log(newLog) {}
-
-	/*
-	 *	A standard inputról bekéri a meccsek számát.
-	 *	@param - nincs
-	 *	@return - size_t -> GameSimulator.simulationNumber típusa
-	 */
-	size_t getFromUserSimulationNumber();
-
+	IOHandler(PlayerContainer* newContainer = nullptr, SimulationLog* newLog = nullptr) : container(newContainer), log(newLog) {}
+	void getFromUserSimulationNumber();
 	void getFromUserRandomPlayer();
 	void getFromUserStonePlayer();
 	void getFromUserPaperPlayer();
