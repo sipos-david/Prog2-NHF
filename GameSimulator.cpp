@@ -1,6 +1,14 @@
 #include "GameSimulator.h"
 
+void GameSimulator::getParameters() {
+	this->simulationNumber = interface.getFromUserSimulationNumber();
+}
+
 void GameSimulator::simulation()
+{
+}
+
+void GameSimulator::displayResults()
 {
 }
 

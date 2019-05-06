@@ -6,11 +6,18 @@
 
 class IOHandler {
 private:
-	PlayerContainer* container;
-	SimulationLog* log;
+	PlayerContainer& container;
+	SimulationLog& log;
 public:
-	IOHandler(PlayerContainer* newContainer = nullptr, SimulationLog* newLog = nullptr) : container(newContainer), log(newLog) {}
+	IOHandler(PlayerContainer& newContainer, SimulationLog& newLog) : container(newContainer), log(newLog) {}
+
+	/*
+	 *	A felhasználó álltal a stantard inputra megadott számot adja vissza. -> GameSimulator.simulationNumber olvasása.
+	 *	@param - nincs
+	 *	@return - size_t -> GameSimulator.simulationNumber típusa
+	 */
 	void getFromUserSimulationNumber();
+
 	void getFromUserRandomPlayer();
 	void getFromUserStonePlayer();
 	void getFromUserPaperPlayer();

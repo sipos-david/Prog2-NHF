@@ -1,7 +1,10 @@
 #include "IOHandler.h"
 
-void IOHandler::getFromUserSimulationNumber()
-{
+size_t IOHandler::getFromUserSimulationNumber() {
+	size_t tmp;
+	std::cout << "Mennyi meccseet jatszanak a jatekosok?" << std::endl;
+	std::cin >> tmp;
+	return tmp;
 }
 
 void IOHandler::getFromUserRandomPlayer()
