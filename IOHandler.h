@@ -16,7 +16,7 @@ public:
 	 *	@param - nincs
 	 *	@return - size_t -> GameSimulator.simulationNumber típusa
 	 */
-	void getFromUserSimulationNumber();
+	size_t getFromUserSimulationNumber();
 
 	void getFromUserRandomPlayer();
 	void getFromUserStonePlayer();

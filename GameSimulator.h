@@ -18,7 +18,7 @@ private:
 	void playMatch(Player* playerOne, Player* Two);
 
 public:
-	GameSimulator() : simulationNumber(0) {}
+	GameSimulator() : simulationNumber(0),interface(players,log) {}
 
 	/*
 	 *	A felhasználó stantard inputon megadott adatai alapján felépíti a példányt a kivánt szimulációhoz.
