@@ -3,12 +3,18 @@
 
 #include "PlayerBase.h"
 
+#include "StonePlayer.h";
+#include "PaperPlayer.h";
+#include "ScissorsPlayer.h";
+#include "RandomPlayer.h";
+#include "SequencePlayer.h";
+
 class Player {
 private:
 	PlayerBase* player;
 
 public:
-	Player(PlayerBase* newPlayer) : player(newPlayer) {}
+	Player(PlayerBase* newPlayer = nullptr) : player(newPlayer) {}
 
 	Player(Player const& masolando) {
 		player = masolando.player->copy();
@@ -22,8 +28,12 @@ public:
 		return *this;
 	}
 
-	~Player() {
-		delete player;
+	size_t getId() {
+		return this->player->getId();
+	}
+
+	String getName() {
+		return this->player->getName();
 	}
 
 	PlayerBase* operator->() {
@@ -32,6 +42,10 @@ public:
 
 	PlayerBase const* operator->() const {
 		return player;
+	}
+
+	~Player() {
+		delete player;
 	}
 };
 

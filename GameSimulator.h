@@ -4,6 +4,7 @@
 #include "PlayerContainer.h"
 #include "SimulationLog.h"
 #include "IOHandler.h"
+#include "memtrace.h"
 
 
 class GameSimulator {
@@ -14,7 +15,6 @@ private:
 	size_t simulationNumber;
 
 	void simulateMatches(Player* playerOne, Player* Two);
-	void initPlayersFromUser();
 	void playMatch(Player* playerOne, Player* Two);
 
 public:
@@ -22,13 +22,29 @@ public:
 
 	/*
 	 *	A felhasználó stantard inputon megadott adatai alapján felépíti a példányt a kivánt szimulációhoz.
+	 *
 	 *	@param - nincs
 	 *	@return -nincs
 	 */
 	void getParameters();
 
+	/*
+	 *	Lefuttatja szimulácókat, és log osztály használatával naplózza azokat.
+	 *
+	 *	@param - nincs
+	 *	@return -nincs
+	 */
 	void simulation();
+
+
+	/*
+	 *	Kíírja a standard inputra a szimulációk eredményeit az interface használatával.
+	 *
+	 *	@param - nincs
+	 *	@return -nincs
+	 */
 	void displayResults();
+
 	~GameSimulator() {}
 };
 

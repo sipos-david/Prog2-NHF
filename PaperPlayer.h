@@ -9,7 +9,10 @@ public:
 	MoveType move() {
 		return paper;
 	}
-	PlayerBase* copy() const {}
+	PlayerBase* copy() const {
+		PaperPlayer* copy = new PaperPlayer(this->getId(), this->getName());
+		return copy;
+	}
 	~PaperPlayer() {};
 };
 

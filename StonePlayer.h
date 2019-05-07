@@ -5,11 +5,18 @@
 
 class StonePlayer : public PlayerBase {
 public:
+
 	StonePlayer(const size_t newId, const String& newName) : PlayerBase(newId, newName) {}
+
 	MoveType move() {
 		return stone;
 	}
-	PlayerBase* copy() const {}
+
+	PlayerBase* copy() const {
+		StonePlayer* copy = new StonePlayer(this->getId(), this->getName());
+		return copy;
+	}
+
 	~StonePlayer() {};
 };
 

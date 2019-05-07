@@ -1,4 +1,4 @@
-#ifndef PLAYERBASEH
+#ifndef PLAYERBASE_H
 #define PLAYERBASE_H
 
 #include "MyString.h"
@@ -10,8 +10,18 @@ private:
 	String name;
 public:
 	PlayerBase(const size_t newId, const String& newName) : id(newId), name(newName) {}
+
+	size_t getId() const{
+		return id;
+	}
+
+	String getName() const{
+		return name;
+	}
+
 	virtual MoveType move() = 0;
 	virtual PlayerBase* copy() const = 0;
+
 	virtual ~PlayerBase() {};
 };
 

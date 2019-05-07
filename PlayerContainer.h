@@ -7,10 +7,17 @@ class PlayerContainer {
 private:
 	size_t length;
 	Player* players;
+
 public:
+
 	PlayerContainer() : length(0), players(nullptr) {}
 	void playerAdd(Player* newPlayer);
+
+	size_t size() const;
 	Player& operator[](size_t index);
+	bool empty();
+	void resize(size_t add);
+
 	~PlayerContainer();
 };
 
