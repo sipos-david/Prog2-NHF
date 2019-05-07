@@ -15,9 +15,6 @@ void GameSimulator::simulation()
 void GameSimulator::displayResults() {
 	interface.listPlayerLogs();
 	interface.listAllPlayers();
-	{
-
-	};
 }
 
 void GameSimulator::simulateMatches(Player* playerOne, Player* Two)

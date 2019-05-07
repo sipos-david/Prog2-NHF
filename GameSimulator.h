@@ -4,8 +4,6 @@
 #include "PlayerContainer.h"
 #include "SimulationLog.h"
 #include "IOHandler.h"
-#include "memtrace.h"
-
 
 class GameSimulator {
 private:

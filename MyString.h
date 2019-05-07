@@ -94,6 +94,20 @@ public:
      * @return új String, ami tartalmazza a sztringet és a karaktert egymás után
 	 */
     String operator+(char rhs_c) const { return *this + String(rhs_c);}
+
+	/**
+	 * Sztrinhez c-s char tömböt összefűz
+	 * @param rhs_c - jobboldali karakter
+	 * @return új String, ami tartalmazza a sztringet és a karaktert egymás után
+	 */
+	String operator+(char* rhs_c) const { return *this + String(rhs_c); }
+
+	/**
+	 * Sztrinhez int-et összefűz
+	 * @param rhs - jobboldali karakter
+	 * @return új String, ami tartalmazza a sztringet és a karaktert egymás után
+	 */
+	String operator+(int rhs) const;
 	
 	/**
      * A string egy megadott indexű elemének REFERENCIÁJÁVAL tér vissza.

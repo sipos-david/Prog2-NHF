@@ -20,6 +20,8 @@ public:
 
 	void reset() { currentSequenceCounter = 0; }
 
+	String getSequence() const { return sequenceContainer; }
+
 	PlayerBase* copy() const {
 		SequencePlayer* copy = new SequencePlayer(this->getId(), this->getName(), this->sequenceContainer);
 		return copy;

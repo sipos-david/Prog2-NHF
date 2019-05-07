@@ -1,4 +1,7 @@
 #include "IOHandler.h"
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
 
 bool IOHandler::getFromUserYesOrNoQuestion(const char* question) {
 	std::cout << question << std::endl;
@@ -45,7 +48,27 @@ void IOHandler::getFromUserScissorsPlayer() {
 
 void IOHandler::getFromUserSequancePlayer() {
 	if (this->getFromUserYesOrNoQuestion("Legyen-e szekvencia jatekos?")) {
+		String currentSequence ,baseName = "szekvencia jatekos ";
+		int currentNum = 1;
 
+		/* C-s fájlkezelés, mivel nem lehet használlni std::string-et */
+		FILE* inputFile = fopen("sequences.txt", "r");
+
+		if (inputFile == NULL) {
+			std::cout << "sequences.txt :: error :: couldn't open!" << std::endl;
+			return;
+		}
+			
+		char in = fgetc(inputFile);
+		while (in != EOF)
+		{
+			if (in == ';')
+				container.playerAdd(new Player(new SequencePlayer(this->getIdForPlayer(), baseName + currentNum++, currentSequence)));
+			else
+				currentSequence = currentSequence + in;
+			in = fgetc(inputFile);
+		}
+		fclose(inputFile);
 	}
 }
 

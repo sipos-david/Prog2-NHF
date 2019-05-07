@@ -104,3 +104,19 @@ std::istream& operator>>(std::istream& is, String& stringIn) {
 	is.setf(fl);						// visszaállítjuk a flag-eket
     return is;
 }
+
+String String::operator+(int rhs) const {
+	if (rhs == 0)
+		return *this + '0';
+	String tmp;
+	while (rhs != 0) {
+		tmp = tmp + char('0' + rhs % 10);
+		rhs = rhs / 10;
+	}
+	for (size_t i = 0; i < tmp.size() / 2; i++) {
+		char tmpC = tmp[i];
+		tmp[i] = tmp[tmp.size() - i - 1];
+		tmp[tmp.size() - i - 1] = tmpC;
+	}
+	return *this + tmp;
+}
