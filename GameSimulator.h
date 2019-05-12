@@ -18,7 +18,7 @@ private:
 public:
 	GameSimulator() : simulationNumber(0),interface(players,log) {}
 
-	/*
+	/**
 	 *	A felhasználó stantard inputon megadott adatai alapján felépíti a példányt a kivánt szimulációhoz.
 	 *
 	 *	@param - nincs
@@ -26,7 +26,7 @@ public:
 	 */
 	void getParameters();
 
-	/*
+	/**
 	 *	Lefuttatja szimulácókat, és log osztály használatával naplózza azokat.
 	 *
 	 *	@param - nincs
@@ -35,7 +35,7 @@ public:
 	void simulation();
 
 
-	/*
+	/**
 	 *	Kíírja a standard inputra a szimulációk eredményeit az interface használatával.
 	 *
 	 *	@param - nincs

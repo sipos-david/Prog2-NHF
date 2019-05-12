@@ -2,19 +2,16 @@
 #define GTEST_LITE_H
 
 /**
- * \file gtest_lite.h  (v2)
+ * \file gtest_lite.h  (v3/2019)
  *
  * Google gtest keretrendszerhez hasonló rendszer.
  * Sz.I. 2015., 2016., 2017. (_Has_X)
- * Sz.I. 2018 (template), ENDM, ENDMsg
+ * Sz.I. 2018 (template), ENDM, ENDMsg, nullptr_t
+ * Sz.I. 2019 singleton
  *
  * A tesztelés legalapvetőbb funkcióit támogató függvények és makrók.
  * Nem szálbiztos megvalósítás.
  *
- * Egyetlen fájlban kell megvalósítani minden tesztesetet!
- * Csak ebből include-olható a gtest_lite.h
- * Ezen korlátozás kiküszöböléséhez sigletonnal kellene rednesen megvalósítani.
-  a test osztályt!
  *
  * Szabadon felhasználható, bővíthető.
  *
@@ -139,7 +136,7 @@
     catch (exception_type) { gtest_lite::test.tmp = true; throw; } \
     EXPECTTHROW(statement, "kivetelt dob.", "nem dobott '"#exception_type"' kivetelt.")
 
-/// Segédmakró egy adattag, vagy tagfüggvény létezésének tesztelésére FUTÁSI időben
+/// Segédmakró egy adattag, vagy tagfüggvény létezésének tesztelésére futási időben
 /// Ötlet:
 /// https://cpptalk.wordpress.com/2009/09/12/substitution-failure-is-not-an-error-2
 /// Használat:
@@ -157,12 +154,12 @@ template<typename T> struct _Has_##X {  \
 
 /// Segédfüggvény egy publikus adattag, vagy tagfüggvény létezésének tesztelésére
 /// fordítási időben
-void hasMember(...) {}
+inline void hasMember(...) {}
 
 /// Segédsablon típuskonverzió futás közbeni ellenőrzésere
 template <typename F, typename T>
 struct _Is_Types {
-    template<typename D> static char (&f(D*))[1];
+    template<typename D> static char (&f(D))[1];
     template<typename D> static char (&f(...))[2];
     static bool const convertable = sizeof(f<T>(F())) == 1;
 };
@@ -206,8 +203,15 @@ struct Test {
     bool tmp;           ///< temp a kivételkezeléshez;
     std::string name;   ///< éppen futó teszt neve
     std::fstream null;  ///< nyelő, ha nem kell kiírni semmit
-
+    static Test& getTest() {
+        static Test instance;///< egyedüli (singleton) példány
+        return instance;
+    }
+private:    /// singleton minta miatt
     Test() :sum(0), failed(0), status(false), null("/dev/null") {}
+    Test(const Test&);
+    void operator=(const Test&);
+public:
     /// Teszt kezdete
     void begin(const char *n) {
         name = n; status = true;
@@ -264,8 +268,9 @@ struct Test {
     }
 };
 
-/// Egyetlen statikus példány. (singletonnal szebb lenne)
-static Test test;
+/// A statikus referencia minden fordítási egységben keletkezik, de
+/// mindegyik egyetlen példányra fog hivatkozni a singleton minta miatt
+static Test& test = Test::getTest();
 
 /// általános sablon a várt értékhez.
 template <typename T1, typename T2>
@@ -295,8 +300,6 @@ std::ostream& EXPECT_(T1* exp, std::nullptr_t act, bool (*pred)(T1*, std::nullpt
         << "\n** " << rhs << ": " << (void*) act << std::endl;
 }
 #endif
-
-
 
 /// stringek összehasonlításához.
 /// azért nem spec. mert a sima EQ-ra másként kell működnie.

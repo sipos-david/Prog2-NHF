@@ -5,7 +5,7 @@ Keszitette: Peregi Tamas, BME IIT, 2011
 Kanari:     Szeberenyi Imre, 2013.,
 VS 2012:    Szeberényi Imre, 2015.,
 mem_dump:   2016.
-inclue-ok:  2017., 2018.
+inclue-ok:  2017., 2018. 2019.
 *********************************/
 
 #ifndef MEMTRACE_H
@@ -61,39 +61,39 @@ inclue-ok:  2017., 2018.
 #endif
 
 #ifdef __cplusplus
-    #define START_NAMESPACE namespace memtrace {
-    #define END_NAMESPACE } /*namespace*/
-    #define TRACEC(func) memtrace::func
-    #include <new>
-    // THROW deklaráció változatai
-    #if defined(_MSC_VER)
-    // VS rosszul kezeli az __cplusplus makrot
-      #if _MSC_VER < 1900
-        // * nem biztos, hogy jó így *
-   	#define THROW_BADALLOC
+	#define START_NAMESPACE namespace memtrace {
+	#define END_NAMESPACE } /*namespace*/
+	#define TRACEC(func) memtrace::func
+	#include <new>
+#else
+	#define START_NAMESPACE
+	#define END_NAMESPACE
+	#define TRACEC(func) func
+#endif
+
+// THROW deklaráció változatai
+#if defined(_MSC_VER)
+  // VS rosszul kezeli az __cplusplus makrot
+  #if _MSC_VER < 1900
+    // * nem biztos, hogy jó így *
+	#define THROW_BADALLOC
 	#define THROW_NOTHING
-      #else
-        // C++11 vagy újabb
-	#define THROW_BADALLOC noxcept(false)
+  #else
+    // C++11 vagy újabb
+	#define THROW_BADALLOC noexcept(false)
 	#define THROW_NOTHING noexcept
-      #endif
-    #else
-      #if __cplusplus < 201103L
+  #endif
+#else
+  #if __cplusplus < 201103L
 	// C++2003 vagy régebbi
 	#define THROW_BADALLOC throw (std::bad_alloc)
 	#define THROW_NOTHING throw ()
-      #else
-        // C++11 vagy újabb
+  #else
+    // C++11 vagy újabb
 	#define THROW_BADALLOC noexcept(false)
 	#define THROW_NOTHING noexcept
-      #endif
-    #endif
-#else
-    #define START_NAMESPACE
-    #define END_NAMESPACE
-    #define TRACEC(func) func
+  #endif
 #endif
-
 
 START_NAMESPACE
 	int allocated_blocks();
@@ -209,7 +209,7 @@ void operator delete[](void *p, int, const char *) THROW_NOTHING;
 #define delete memtrace::set_delete_call(__LINE__, __FILE__),delete
 
 #ifdef CPORTA
-//#define system(...)  // system(__VA_ARGS__)
+#define system(...)  // system(__VA_ARGS__)
 #endif
 
 #endif /*MEMTRACE_CPP*/

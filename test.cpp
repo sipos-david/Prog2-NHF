@@ -1,5 +1,5 @@
-//#define MEMTRACE
-//#include "memtrace.h"
+#define MEMTRACE
+#include "memtrace.h"
 #include "GameSimulator.h"
 
 int main() {

@@ -1,13 +1,13 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "StonePlayer.h"
+#include "PaperPlayer.h"
+#include "ScissorsPlayer.h"
+#include "RandomPlayer.h"
+#include "SequencePlayer.h"
 #include "PlayerBase.h"
 
-#include "StonePlayer.h";
-#include "PaperPlayer.h";
-#include "ScissorsPlayer.h";
-#include "RandomPlayer.h";
-#include "SequencePlayer.h";
 
 class Player {
 private:

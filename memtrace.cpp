@@ -6,10 +6,11 @@ Kanari:     Szeberenyi Imre, 2013.
 VS 2012:    Szeberényi Imre, 2015.,
 mem_dump:   2016.
 meset felszabaditaskor: 2018.
+typo:       2019.
 *********************************/
 
-/*definiealni kell, ha nem paracssorbol allitjuk be (-DMEMTRACE) */
-/*#define MEMTRACE */
+/*definialni kell, ha nem paracssorbol allitjuk be (-DMEMTRACE) */
+#define MEMTRACE 
 
 #ifdef _MSC_VER
 	#define _CRT_SECURE_NO_WARNINGS 1
@@ -514,7 +515,7 @@ START_NAMESPACE
 			#ifdef MEMTRACE_TO_MEMORY
 				registry.next = NULL;
 				#if !defined(USE_ATEXIT_OBJECT) && defined(MEMTRACE_AUTO)
-					atexit((void(*)())mem_check);
+					atexit((void(*)(void))mem_check);
 				#endif
 			#endif
 			#ifdef MEMTRACE_TO_FILE

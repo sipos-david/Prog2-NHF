@@ -3,8 +3,6 @@ project(GameSimulator)
 
 set(CMAKE_CXX_STANDARD 14)
 
-file(GLOB_RECURSE sources *.cpp *.h)
-
-add_executable(usageTest ${sources})
+add_executable(usageTest test.cpp memtrace.cpp GameSimulator.cpp IOHandler.cpp MyString.cpp PlayerContainer.cpp SimulationLog.cpp SequencePlayer.cpp)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/sequences.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
