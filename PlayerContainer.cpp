@@ -3,11 +3,14 @@
 void PlayerContainer::playerAdd(Player* newPlayer) {
 	this->resize(1);
 	this->players[length - 1] = *newPlayer;
+	/* A players(PlayerContainer)-be MASOLODIK a newPLayer értéke, fel kell szabadítani ezután */
+	delete newPlayer;
 }
 
 Player& PlayerContainer::operator[](size_t index){
 	if (index < length)
 		return players[index];
+	throw std::out_of_range("PlayerContainer::operator[] : tul indexeles");
 }
 
 PlayerContainer::~PlayerContainer() {

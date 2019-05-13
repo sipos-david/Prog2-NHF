@@ -8,6 +8,8 @@ class RandomPlayer : public PlayerBase {
 public:
 	RandomPlayer(const size_t newId, const String& newName) : PlayerBase(newId, newName) {}
 
+	void init() {}
+
 	MoveType move() {
 		return MoveType(rand() % 3);
 	}

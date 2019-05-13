@@ -19,6 +19,7 @@ public:
 		return name;
 	}
 
+	virtual void init() = 0;
 	virtual MoveType move() = 0;
 	virtual PlayerBase* copy() const = 0;
 

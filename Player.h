@@ -36,6 +36,14 @@ public:
 		return this->player->getName();
 	}
 
+	MoveType move() {
+		return player->move();
+	}
+
+	void init() {
+		player->init();
+	}
+
 	PlayerBase* operator->() {
 		return player;
 	}

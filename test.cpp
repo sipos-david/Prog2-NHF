@@ -1,9 +1,14 @@
-#define MEMTRACE
-#include "memtrace.h"
+//#define MEMTRACE
+//#include "memtrace.h"
 #include "GameSimulator.h"
 
 int main() {
-	GameSimulator simulation;
+	GameSimulator simulation, simulationTEST(true);
+
+	simulationTEST.getParameters();
+	simulationTEST.simulation();
+	simulationTEST.displayResults();
+
 	simulation.getParameters();
 	simulation.simulation();
 	simulation.displayResults();

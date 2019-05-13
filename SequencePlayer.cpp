@@ -1,6 +1,8 @@
 #include "SequencePlayer.h"
 
 MoveType SequencePlayer::move() {
+	if (sequenceContainer.size() == currentSequenceCounter)
+		reset();
 	return charToMoveType(sequenceContainer[currentSequenceCounter++]);
 }
 

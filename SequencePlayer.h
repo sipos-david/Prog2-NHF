@@ -16,6 +16,8 @@ public:
 																						   sequenceContainer(newSequence),
 																						   sequenceLength(newSequence.size()) {}
 
+	void init() { reset(); }
+
 	MoveType move();
 
 	void reset() { currentSequenceCounter = 0; }

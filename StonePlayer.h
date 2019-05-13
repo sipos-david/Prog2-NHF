@@ -8,6 +8,8 @@ public:
 
 	StonePlayer(const size_t newId, const String& newName) : PlayerBase(newId, newName) {}
 
+	void init() {}
+
 	MoveType move() {
 		return stone;
 	}

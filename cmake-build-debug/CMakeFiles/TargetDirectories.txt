@@ -1,0 +1,3 @@
+C:/Users/Sipi/Desktop/Prog2-NHF/cmake-build-debug/CMakeFiles/usageTest.dir
+C:/Users/Sipi/Desktop/Prog2-NHF/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sipi/Desktop/Prog2-NHF/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -8,6 +8,8 @@ public:
 
 	ScissorsPlayer(const size_t newId, const String& newName) : PlayerBase(newId, newName) {}
 
+	void init() {}
+
 	MoveType move() {
 		return scissors;
 	}
