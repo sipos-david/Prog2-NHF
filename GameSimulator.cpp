@@ -31,6 +31,104 @@ void GameSimulator::test() {
 		std::cout << " Tesztmod: ERROR: nem tesztpeldany" << std::endl;
 		return;
 	}
+
+	int sikeres = 0, osszes = 5;
+	std::cout << "----- Kritikus fuggvenyek tesztelese -----" << std::endl;
+
+	std::cout << "--- TEST 01 ---" << std::endl;
+	bool testCheck = moveWinsCheck(stone,paper);
+
+	if (!testCheck) {
+		sikeres++;
+		std::cout << "--- TEST 01 : SIKERES ---" << std::endl;
+	}
+	else {
+		std::cout << "--- TEST 01 : HIBAS ---" << std::endl;
+	}
+
+	std::cout << "--- TEST 02 ---" << std::endl;
+	testCheck = moveWinsCheck(paper, scissors);
+
+	if (!testCheck) {
+		sikeres++;
+		std::cout << "--- TEST 02 : SIKERES ---" << std::endl;
+	}
+	else {
+		std::cout << "--- TEST 02 : HIBAS ---" << std::endl;
+	}
+
+	Player* dummy1 = new Player(new ScissorsPlayer(0, "dummy1"));
+	Player* dummy2 = new Player(new PaperPlayer(1, "dummy2"));
+	std::cout << "--- TEST 03 ---" << std::endl;
+	GameResult gameResCheck = playGame(dummy1, dummy2);
+
+	if (gameResCheck == playerOneWins) {
+		sikeres++;
+		std::cout << "--- TEST 03 : SIKERES ---" << std::endl;
+	}
+	else {
+		std::cout << "--- TEST 03 : HIBAS ---" << std::endl;
+	}
+	delete dummy1;
+	delete dummy2;
+
+	dummy1 = new Player(new StonePlayer(0, "dummy1"));
+	dummy2 = new Player(new PaperPlayer(1, "dummy2"));
+	std::cout << "--- TEST 04 ---" << std::endl;
+	gameResCheck = playGame(dummy1, dummy2);
+
+	if (gameResCheck == playerTwoWins) {
+		sikeres++;
+		std::cout << "--- TEST 04 : SIKERES ---" << std::endl;
+	}
+	else {
+		std::cout << "--- TEST 04 : HIBAS ---" << std::endl;
+	}
+	delete dummy1;
+	delete dummy2;
+
+	dummy1 = new Player(new ScissorsPlayer(0, "dummy1"));
+	 dummy2 = new Player(new ScissorsPlayer(1, "dummy2"));
+	std::cout << "--- TEST 05 ---" << std::endl;
+	gameResCheck = playGame(dummy1, dummy2);
+
+	if (gameResCheck == draw) {
+		sikeres++;
+		std::cout << "--- TEST 05 : SIKERES ---" << std::endl;
+	}
+	else {
+		std::cout << "--- TEST 05 : HIBAS ---" << std::endl;
+	}
+	delete dummy1;
+	delete dummy2;
+
+	std::cout << "------ " << sikeres << "/" << osszes<< " -----" << std::endl;
+
+	switch (sikeres)
+	{
+		case 0:
+			std::cout << "----- Nagyon baj ban -----" << std::endl;
+			break;
+		case 1:
+			std::cout << "----- :,( -----" << std::endl;
+			break;
+		case 2:
+			std::cout << "----- Elegseges -----" << std::endl;
+			break;
+		case 3:
+			std::cout << "----- ??? -----" << std::endl;
+			break;
+		case 4:
+			std::cout << "----- Talan -----" << std::endl;
+			break;
+		case 5:
+			std::cout << "----- Szuper -----" << std::endl;
+			break;
+		default:
+			break;
+	}
+
+	std::cout << "----- Teszteles vege -----" << std::endl;
 }
 
 void GameSimulator::simulateMatches(Player* playerOne, Player* playerTwo) {

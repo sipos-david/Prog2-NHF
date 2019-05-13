@@ -3,6 +3,9 @@
 
 #include "PlayerBase.h"
 
+/**
+ * PlayerBase-bõl leszármazott osztály. A heterogén kollekció része. A csak követ játszó stra-tégiát használja.
+ */
 class StonePlayer : public PlayerBase {
 public:
 

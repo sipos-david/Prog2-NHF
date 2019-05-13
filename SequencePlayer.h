@@ -3,8 +3,19 @@
 
 #include "PlayerBase.h"
 
+/**
+ *	char-ból készít MoveType enumerizációt, ha nem megfelelõ a bemenet std::invalid_argument kivételt dob.
+ *
+ *	@param - ch a karakter 
+ *	@return - MoveType enumerizáció
+ */
 MoveType charToMoveType(const char ch);
 
+/**
+* PlayerBase-bõl leszármazott osztály. A heterogén kollekció része. Egy bizonyos szekvenci-át ismétel. 
+* Magát a szekvenciát egy Stringben tárolja (k, p, o) és belül követi, hogy éppen hol tart. 
+* Ha egy szekvenciának vége, akkor elölrõl kezdi. Van reset() függvénye amivel alaphely-zetbe állítható hogy elölrõl lehessen kezdni a szimulációt.
+*/
 class SequencePlayer : public PlayerBase {
 private:
 	size_t currentSequenceCounter = 0;
@@ -20,6 +31,12 @@ public:
 
 	MoveType move();
 
+	/**
+	 *	Visszaállítja "eredeti" állapotába a példányt.
+	 *
+	 *	@param - nincs
+	 *	@return - nincs
+	 */
 	void reset() { currentSequenceCounter = 0; }
 
 	String getSequence() const { return sequenceContainer; }

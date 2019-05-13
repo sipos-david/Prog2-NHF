@@ -18,7 +18,17 @@ bool IOHandler::getFromUserYesOrNoQuestion(const char* question) {
 size_t IOHandler::getFromUserSimulationNumber() {
 	size_t tmp;
 	std::cout << "Mennyi meccset jatszanak a jatekosok?" << std::endl;
-	std::cin >> tmp;
+
+	bool succes = false;
+	while (!succes) {
+		try {
+			std::cin >> tmp;
+			succes = true;
+		}
+		catch (...) {
+			succes = false;
+		}
+	}
 	return tmp;
 }
 
@@ -64,7 +74,7 @@ void IOHandler::getFromUserSequancePlayer() {
 		{
 			if (in == ';')
 				container.playerAdd(new Player(new SequencePlayer(this->getIdForPlayer(), baseName + currentNum++, currentSequence)));
-			else
+			else if (in == 'k' || in == 'K' || in == 'p' || in == 'P' || in == 'o' || in == 'O')
 				currentSequence = currentSequence + in;
 			in = fgetc(inputFile);
 		}

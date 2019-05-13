@@ -4,6 +4,11 @@
 #include "PlayerBase.h"
 #include <cstdlib>
 
+/**
+*	PlayerBase-bõl leszármazott osztály. A heterogén kollekció része. 
+*	A randomizált játékost valósítja meg, a cstdlib library-ban található rand() függvény segítségével. 
+*	az srand() meg-hívásáért nem felel, a példányosítása elõtt biztosítani kell a lefutását.
+*/
 class RandomPlayer : public PlayerBase {
 public:
 	RandomPlayer(const size_t newId, const String& newName) : PlayerBase(newId, newName) {}

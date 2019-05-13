@@ -2,7 +2,9 @@
 #define SCISSORSPLAYER_H
 
 #include "PlayerBase.h"
-
+/**
+*	PlayerBase-bõl leszármazott osztály. A heterogén kollekció része. A csak az ollót játsza.
+*/
 class ScissorsPlayer : public PlayerBase {
 public:
 
