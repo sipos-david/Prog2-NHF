@@ -1,0 +1,107 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_ae3f71a23d0f4c2ea52760a370bf73c81}\label{class_player_ae3f71a23d0f4c2ea52760a370bf73c81}} 
+{\bfseries Player} (\mbox{\hyperlink{class_player_base}{Player\+Base}} $\ast$new\+Player=nullptr)
+\item 
+\mbox{\Hypertarget{class_player_a2615dac68311b186c94b2c58cbfbbd3d}\label{class_player_a2615dac68311b186c94b2c58cbfbbd3d}} 
+{\bfseries Player} (\mbox{\hyperlink{class_player}{Player}} const \&masolando)
+\item 
+\mbox{\Hypertarget{class_player_aa3f7ba5301bbeb0de1a3a903eb66ebaf}\label{class_player_aa3f7ba5301bbeb0de1a3a903eb66ebaf}} 
+\mbox{\hyperlink{class_player}{Player}} \& {\bfseries operator=} (\mbox{\hyperlink{class_player}{Player}} const \&masolando)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_player_a49f46c809f67efc6fda7903d82644ad4}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_player_aebc98c3b8d713db3e9a559ba090b1190}{get\+Name}} ()
+\item 
+Move\+Type \mbox{\hyperlink{class_player_abdb59c3393df0f5e71ae36f4f2d1a376}{move}} ()
+\item 
+void \mbox{\hyperlink{class_player_a015ea21fa1e7273e47d48cb20d9b12e3}{init}} ()
+\item 
+\mbox{\Hypertarget{class_player_a4ddeb39cc31ccc5b39d12f51e777cc7d}\label{class_player_a4ddeb39cc31ccc5b39d12f51e777cc7d}} 
+\mbox{\hyperlink{class_player_base}{Player\+Base}} $\ast$ {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{class_player_a7dd606b767c30e0c1aa1492d5908525e}\label{class_player_a7dd606b767c30e0c1aa1492d5908525e}} 
+\mbox{\hyperlink{class_player_base}{Player\+Base}} const  $\ast$ {\bfseries operator-\/$>$} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_player_base}{Player\+Base}} és \mbox{\hyperlink{class_player}{Player}} akár egy osztály is lehetne, de mégis így valósítottam meg õket, hogy könnyebben kezelhetõek legyenek. A \mbox{\hyperlink{class_player_base}{Player\+Base}} felel az adattagokért, míg a \mbox{\hyperlink{class_player}{Player}} a mûveletekért, például másolás, értékadás. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a49f46c809f67efc6fda7903d82644ad4}\label{class_player_a49f46c809f67efc6fda7903d82644ad4}} 
+\index{Player@{Player}!getId@{getId}}
+\index{getId@{getId}!Player@{Player}}
+\subsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily size\+\_\+t Player\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Visszaadja a példány id-\/ját.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ size\+\_\+t, id típusa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_aebc98c3b8d713db3e9a559ba090b1190}\label{class_player_aebc98c3b8d713db3e9a559ba090b1190}} 
+\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\subsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Player\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Visszaadja a nevét.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ string, name típusa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a015ea21fa1e7273e47d48cb20d9b12e3}\label{class_player_a015ea21fa1e7273e47d48cb20d9b12e3}} 
+\index{Player@{Player}!init@{init}}
+\index{init@{init}!Player@{Player}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Player\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Egy függvény, ami inicializálja, vagyis elõkészíti a példányt. Jelen állapotban csak a szekvencia játékos használja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Move\+Type enumerizáció. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_abdb59c3393df0f5e71ae36f4f2d1a376}\label{class_player_abdb59c3393df0f5e71ae36f4f2d1a376}} 
+\index{Player@{Player}!move@{move}}
+\index{move@{move}!Player@{Player}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily Move\+Type Player\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Visszaadja a lépést, követve a példány stratégiáját.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Move\+Type enumerizáció. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Player.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,222 @@
+\hypertarget{class_simulation_log}{}\section{Simulation\+Log Class Reference}
+\label{class_simulation_log}\index{SimulationLog@{SimulationLog}}
+
+
+{\ttfamily \#include $<$Simulation\+Log.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_simulation_log_a91a471edb0f7996b64eb4ce540a09a06}\label{class_simulation_log_a91a471edb0f7996b64eb4ce540a09a06}} 
+{\bfseries Simulation\+Log} (\mbox{\hyperlink{struct_game_log}{Game\+Log}} $\ast$new\+Match\+Logs=nullptr, \mbox{\hyperlink{struct_player_log}{Player\+Log}} $\ast$new\+Player\+Logs=nullptr, size\+\_\+t default\+Length=0)
+\item 
+void \mbox{\hyperlink{class_simulation_log_a4dbd592ba24230cdaaa1fe4b2b977e6b}{add\+Match\+Log}} (\mbox{\hyperlink{struct_game_log}{Game\+Log}} $\ast$new\+Game\+Log)
+\item 
+void \mbox{\hyperlink{class_simulation_log_a006a386a8084288b11f8e079ccdfdb20}{add\+Player\+Log}} (\mbox{\hyperlink{class_player}{Player}} $\ast$new\+Player)
+\item 
+void \mbox{\hyperlink{class_simulation_log_ae0de835b37f24c31699b082f285f1883}{resize\+Match\+Logs}} (size\+\_\+t add)
+\item 
+void \mbox{\hyperlink{class_simulation_log_ae2f1ff6feb765750577f3499f0d3bc69}{resize\+Player\+Logs}} (size\+\_\+t add)
+\item 
+void \mbox{\hyperlink{class_simulation_log_a36843bf8e9b86b9f40399cddecca0db0}{init\+Player\+Logs}} (size\+\_\+t player\+Num)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_simulation_log_afb30c7aa55f05106113b878140815f83}{match\+Logs\+Size}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_simulation_log_ada0cb54ade627aae393574cb462fae48}{player\+Logs\+Size}} ()
+\item 
+\mbox{\hyperlink{struct_player_log}{Player\+Log}} $\ast$ \mbox{\hyperlink{class_simulation_log_aca61d3657fabd4108e23ac17f244ad04}{search\+Player\+Log}} (\mbox{\hyperlink{class_player}{Player}} $\ast$player\+Searched)
+\item 
+\mbox{\hyperlink{struct_game_log}{Game\+Log}} \& \mbox{\hyperlink{class_simulation_log_aaf0d0df6423e6bc44856d659f7d3e172}{it\+Match\+Logs}} (size\+\_\+t index)
+\item 
+bool \mbox{\hyperlink{class_simulation_log_a3b1e7a65e3fd9d7d488f2d74823a8abc}{found\+Match\+Logs}} (\mbox{\hyperlink{class_player}{Player}} $\ast$player\+One, \mbox{\hyperlink{class_player}{Player}} $\ast$player\+Two)
+\item 
+\mbox{\hyperlink{struct_player_log}{Player\+Log}} $\ast$ \mbox{\hyperlink{class_simulation_log_abbcfec5acaa9617c4f190adddf1e84b9}{it\+Player\+Logs}} (size\+\_\+t index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ez az osztály felel a naplózásért. A mentett adatokhoz hozzáadja a megfelelõ eredményeket és a játszmák után módosítja azokat. Például az egy játékoshoz tartozó Player\+Log-\/ot frissíti a meccsek eredményeivel. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_log_a4dbd592ba24230cdaaa1fe4b2b977e6b}\label{class_simulation_log_a4dbd592ba24230cdaaa1fe4b2b977e6b}} 
+\index{SimulationLog@{SimulationLog}!addMatchLog@{addMatchLog}}
+\index{addMatchLog@{addMatchLog}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{addMatchLog()}{addMatchLog()}}
+{\footnotesize\ttfamily void Simulation\+Log\+::add\+Match\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_log}{Game\+Log}} $\ast$}]{new\+Game\+Log }\end{DoxyParamCaption})}
+
+A kapott Game\+Log-\/ot eltárolja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Game\+Log$\ast$, az napló a meccsrõl amit el kell tárolni \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_a006a386a8084288b11f8e079ccdfdb20}\label{class_simulation_log_a006a386a8084288b11f8e079ccdfdb20}} 
+\index{SimulationLog@{SimulationLog}!addPlayerLog@{addPlayerLog}}
+\index{addPlayerLog@{addPlayerLog}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{addPlayerLog()}{addPlayerLog()}}
+{\footnotesize\ttfamily void Simulation\+Log\+::add\+Player\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} $\ast$}]{new\+Player }\end{DoxyParamCaption})}
+
+A kapott játékos alapján készít egy Player\+Log-\/ot és eltárolja azt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Player$\ast$, a heterogén kollekció miatt pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_a3b1e7a65e3fd9d7d488f2d74823a8abc}\label{class_simulation_log_a3b1e7a65e3fd9d7d488f2d74823a8abc}} 
+\index{SimulationLog@{SimulationLog}!foundMatchLogs@{foundMatchLogs}}
+\index{foundMatchLogs@{foundMatchLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{foundMatchLogs()}{foundMatchLogs()}}
+{\footnotesize\ttfamily bool Simulation\+Log\+::found\+Match\+Logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} $\ast$}]{player\+One,  }\item[{\mbox{\hyperlink{class_player}{Player}} $\ast$}]{player\+Two }\end{DoxyParamCaption})}
+
+Visszatér igazzal ha már van a bemenetnek megfelelõ Match\+Log tárolva.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & 2 db játékosra mutató pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ igaz, ha megtalálta a megfelelõ Match\+Log-\/ot. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_a36843bf8e9b86b9f40399cddecca0db0}\label{class_simulation_log_a36843bf8e9b86b9f40399cddecca0db0}} 
+\index{SimulationLog@{SimulationLog}!initPlayerLogs@{initPlayerLogs}}
+\index{initPlayerLogs@{initPlayerLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{initPlayerLogs()}{initPlayerLogs()}}
+{\footnotesize\ttfamily void Simulation\+Log\+::init\+Player\+Logs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{player\+Num }\end{DoxyParamCaption})}
+
+A kívánt mértétre inicializálja a player\+Logs-\/ot, a \mbox{\hyperlink{class_simulation_log_ae2f1ff6feb765750577f3499f0d3bc69}{resize\+Player\+Logs()}} függvény segítségével. Lehet nélküle is, de ennek a függvénynek szerepe a kód olvashatóbbá tétele.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t player\+Num, ennyi hely lesz a tárolóban. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_aaf0d0df6423e6bc44856d659f7d3e172}\label{class_simulation_log_aaf0d0df6423e6bc44856d659f7d3e172}} 
+\index{SimulationLog@{SimulationLog}!itMatchLogs@{itMatchLogs}}
+\index{itMatchLogs@{itMatchLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{itMatchLogs()}{itMatchLogs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_log}{Game\+Log}} \& Simulation\+Log\+::it\+Match\+Logs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+Visszatér a match\+Logs tömb index-\/edik elemérenek referenciájával.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t, index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_abbcfec5acaa9617c4f190adddf1e84b9}\label{class_simulation_log_abbcfec5acaa9617c4f190adddf1e84b9}} 
+\index{SimulationLog@{SimulationLog}!itPlayerLogs@{itPlayerLogs}}
+\index{itPlayerLogs@{itPlayerLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{itPlayerLogs()}{itPlayerLogs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player_log}{Player\+Log}} $\ast$ Simulation\+Log\+::it\+Player\+Logs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+Visszatér a palyer\+Logs tömb index-\/edik elemére mutató pointerrel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t, index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_afb30c7aa55f05106113b878140815f83}\label{class_simulation_log_afb30c7aa55f05106113b878140815f83}} 
+\index{SimulationLog@{SimulationLog}!matchLogsSize@{matchLogsSize}}
+\index{matchLogsSize@{matchLogsSize}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{matchLogsSize()}{matchLogsSize()}}
+{\footnotesize\ttfamily size\+\_\+t Simulation\+Log\+::match\+Logs\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Visszaadja a match\+Logs tömb méretét.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t, ez length\+Match\+Logs típusa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_ada0cb54ade627aae393574cb462fae48}\label{class_simulation_log_ada0cb54ade627aae393574cb462fae48}} 
+\index{SimulationLog@{SimulationLog}!playerLogsSize@{playerLogsSize}}
+\index{playerLogsSize@{playerLogsSize}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{playerLogsSize()}{playerLogsSize()}}
+{\footnotesize\ttfamily size\+\_\+t Simulation\+Log\+::player\+Logs\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Visszaadja a player\+Logs tömb méretét.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t, ez length\+Player\+Logs típusa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_ae0de835b37f24c31699b082f285f1883}\label{class_simulation_log_ae0de835b37f24c31699b082f285f1883}} 
+\index{SimulationLog@{SimulationLog}!resizeMatchLogs@{resizeMatchLogs}}
+\index{resizeMatchLogs@{resizeMatchLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{resizeMatchLogs()}{resizeMatchLogs()}}
+{\footnotesize\ttfamily void Simulation\+Log\+::resize\+Match\+Logs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{add }\end{DoxyParamCaption})}
+
+Újraméretezi a match\+Logs-\/ot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t add, ennyi új helyet hoz létre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_ae2f1ff6feb765750577f3499f0d3bc69}\label{class_simulation_log_ae2f1ff6feb765750577f3499f0d3bc69}} 
+\index{SimulationLog@{SimulationLog}!resizePlayerLogs@{resizePlayerLogs}}
+\index{resizePlayerLogs@{resizePlayerLogs}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{resizePlayerLogs()}{resizePlayerLogs()}}
+{\footnotesize\ttfamily void Simulation\+Log\+::resize\+Player\+Logs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{add }\end{DoxyParamCaption})}
+
+Újraméretezi a player\+Logs-\/ot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t add, ennyi új helyet hoz létre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_log_aca61d3657fabd4108e23ac17f244ad04}\label{class_simulation_log_aca61d3657fabd4108e23ac17f244ad04}} 
+\index{SimulationLog@{SimulationLog}!searchPlayerLog@{searchPlayerLog}}
+\index{searchPlayerLog@{searchPlayerLog}!SimulationLog@{SimulationLog}}
+\subsubsection{\texorpdfstring{searchPlayerLog()}{searchPlayerLog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player_log}{Player\+Log}} $\ast$ Simulation\+Log\+::search\+Player\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} $\ast$}]{player\+Searched }\end{DoxyParamCaption})}
+
+Visszaadja a player\+Logs tömb méretét.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & size\+\_\+t, ez length\+Player\+Logs típusa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulation\+Log.\+h\item 
+Simulation\+Log.\+cpp\end{DoxyCompactItemize}

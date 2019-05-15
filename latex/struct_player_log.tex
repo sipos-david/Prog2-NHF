@@ -1,0 +1,35 @@
+\hypertarget{struct_player_log}{}\section{Player\+Log Struct Reference}
+\label{struct_player_log}\index{PlayerLog@{PlayerLog}}
+
+
+{\ttfamily \#include $<$Simulation\+Log.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_player_log_a1015612a04971524265360ad8660ced0}\label{struct_player_log_a1015612a04971524265360ad8660ced0}} 
+{\bfseries Player\+Log} (\mbox{\hyperlink{class_player}{Player}} $\ast$new\+Player=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_player_log_ab3f2bdb87ee317135861293db8dba31d}\label{struct_player_log_ab3f2bdb87ee317135861293db8dba31d}} 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ {\bfseries player}
+\item 
+\mbox{\Hypertarget{struct_player_log_a629e2ef176109d35cd04df7fc4d94e94}\label{struct_player_log_a629e2ef176109d35cd04df7fc4d94e94}} 
+size\+\_\+t {\bfseries all\+Games\+Played}
+\item 
+\mbox{\Hypertarget{struct_player_log_ab8550ddd58bb2760f8c56777d2606b7b}\label{struct_player_log_ab8550ddd58bb2760f8c56777d2606b7b}} 
+size\+\_\+t {\bfseries games\+Won}
+\item 
+\mbox{\Hypertarget{struct_player_log_a6774d65c10b76f37fd85e8613468ccdc}\label{struct_player_log_a6774d65c10b76f37fd85e8613468ccdc}} 
+size\+\_\+t {\bfseries games\+Draw}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Egy játékos összesített adatait tartalmazza. A játékosra mutató pointer tárolja. Ennek az eredménynek a tárolása a \mbox{\hyperlink{class_player_base}{Player\+Base}} osztályon belül is megvalósulhatott volna, de úgy gondoltam, hogy a \mbox{\hyperlink{class_player_base}{Player\+Base}} osztálynak és leszármazottjainak nem kell számontartania, az eredményeit, csak az aktuális lépessel kell foglalkoznia. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulation\+Log.\+h\end{DoxyCompactItemize}

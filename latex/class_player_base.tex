@@ -1,0 +1,41 @@
+\hypertarget{class_player_base}{}\section{Player\+Base Class Reference}
+\label{class_player_base}\index{PlayerBase@{PlayerBase}}
+
+
+{\ttfamily \#include $<$Player\+Base.\+h$>$}
+
+Inheritance diagram for Player\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.982301cm]{class_player_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_base_a8e4d03e250dc20ede2027252e23b650d}\label{class_player_base_a8e4d03e250dc20ede2027252e23b650d}} 
+{\bfseries Player\+Base} (const size\+\_\+t new\+Id, const \mbox{\hyperlink{class_string}{String}} \&new\+Name)
+\item 
+\mbox{\Hypertarget{class_player_base_abbec45dbb2cadf267946c8131b3c5d2d}\label{class_player_base_abbec45dbb2cadf267946c8131b3c5d2d}} 
+size\+\_\+t {\bfseries get\+Id} () const
+\item 
+\mbox{\Hypertarget{class_player_base_a50704b646835b602ca38e09935407e63}\label{class_player_base_a50704b646835b602ca38e09935407e63}} 
+\mbox{\hyperlink{class_string}{String}} {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{class_player_base_a9a37384d650823a43419a1a072aa184f}\label{class_player_base_a9a37384d650823a43419a1a072aa184f}} 
+virtual void {\bfseries init} ()=0
+\item 
+\mbox{\Hypertarget{class_player_base_a60215ec80148ee2804d268ef43b38572}\label{class_player_base_a60215ec80148ee2804d268ef43b38572}} 
+virtual Move\+Type {\bfseries move} ()=0
+\item 
+\mbox{\Hypertarget{class_player_base_a95effef297d9328c581641864ca33a11}\label{class_player_base_a95effef297d9328c581641864ca33a11}} 
+virtual \mbox{\hyperlink{class_player_base}{Player\+Base}} $\ast$ {\bfseries copy} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_player_base}{Player\+Base}} és \mbox{\hyperlink{class_player}{Player}} akár egy osztály is lehetne, de mégis így valósítottam meg õket, hogy könnyebben kezelhetõek legyenek. A \mbox{\hyperlink{class_player_base}{Player\+Base}} felel az adattagokért, míg a \mbox{\hyperlink{class_player}{Player}} a mûveletekért, például másolás, értékadás. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Player\+Base.\+h\end{DoxyCompactItemize}

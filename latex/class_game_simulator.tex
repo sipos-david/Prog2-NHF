@@ -1,0 +1,96 @@
+\hypertarget{class_game_simulator}{}\section{Game\+Simulator Class Reference}
+\label{class_game_simulator}\index{GameSimulator@{GameSimulator}}
+
+
+{\ttfamily \#include $<$Game\+Simulator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_simulator_a07d0627034ad85417546416ce0ef517c}\label{class_game_simulator_a07d0627034ad85417546416ce0ef517c}} 
+{\bfseries Game\+Simulator} (bool testing=false)
+\item 
+void \mbox{\hyperlink{class_game_simulator_adf1f4f5cb2d39b239ff875337523c490}{get\+Parameters}} ()
+\item 
+void \mbox{\hyperlink{class_game_simulator_abadef46226d5f378b9651643ce14b382}{simulation}} ()
+\item 
+void \mbox{\hyperlink{class_game_simulator_a6f63fc8a0d3adfb4a4219ac3b329cf13}{display\+Results}} ()
+\item 
+void \mbox{\hyperlink{class_game_simulator_a22d30f7be1cc77dcb51f152bbd02daff}{test}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ez az osztály a fõosztály, a feladata a szimulációk lefuttatása és a különbözõ modulok ösz-\/szekapcsolása. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_simulator_a6f63fc8a0d3adfb4a4219ac3b329cf13}\label{class_game_simulator_a6f63fc8a0d3adfb4a4219ac3b329cf13}} 
+\index{GameSimulator@{GameSimulator}!displayResults@{displayResults}}
+\index{displayResults@{displayResults}!GameSimulator@{GameSimulator}}
+\subsubsection{\texorpdfstring{displayResults()}{displayResults()}}
+{\footnotesize\ttfamily void Game\+Simulator\+::display\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Kíírja a standard inputra a szimulációk eredményeit az interface használatával.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_simulator_adf1f4f5cb2d39b239ff875337523c490}\label{class_game_simulator_adf1f4f5cb2d39b239ff875337523c490}} 
+\index{GameSimulator@{GameSimulator}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!GameSimulator@{GameSimulator}}
+\subsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily void Game\+Simulator\+::get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználó stantard inputon megadott adatai alapján felépíti a példányt a kivánt szimulációhoz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & testing ha igaz, akkor a példány tesztpéldány vagyis az std\+::srand() fv hívása a forráskódba beépített konstansal történik, így lehetõség van a random játékos tesztelsére is. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_simulator_abadef46226d5f378b9651643ce14b382}\label{class_game_simulator_abadef46226d5f378b9651643ce14b382}} 
+\index{GameSimulator@{GameSimulator}!simulation@{simulation}}
+\index{simulation@{simulation}!GameSimulator@{GameSimulator}}
+\subsubsection{\texorpdfstring{simulation()}{simulation()}}
+{\footnotesize\ttfamily void Game\+Simulator\+::simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lefuttatja szimulácókat, és log osztály használatával naplózza azokat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_simulator_a22d30f7be1cc77dcb51f152bbd02daff}\label{class_game_simulator_a22d30f7be1cc77dcb51f152bbd02daff}} 
+\index{GameSimulator@{GameSimulator}!test@{test}}
+\index{test@{test}!GameSimulator@{GameSimulator}}
+\subsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily void Game\+Simulator\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A függvény a tesztekért felelõs, ha a test\+Mode hamis hiba üzenetet ír ki a standart kimenetre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Simulator.\+h\item 
+Game\+Simulator.\+cpp\end{DoxyCompactItemize}

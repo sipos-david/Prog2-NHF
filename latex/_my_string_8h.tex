@@ -1,0 +1,71 @@
+\hypertarget{_my_string_8h}{}\section{My\+String.\+h File Reference}
+\label{_my_string_8h}\index{MyString.h@{MyString.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_string}{String}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_my_string_8h_ab6e568a9a1c6b06fca64efeeeeb4d1f5}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_string}{String}} \&string\+Out)
+\item 
+std\+::istream \& \mbox{\hyperlink{_my_string_8h_afb72f7254c8be75f3fc771ab6303a2b6}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_string}{String}} \&string\+In)
+\item 
+\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{_my_string_8h_a8d89d501f582c3a65df894dbd030bbcf}{operator+}} (char ch, const \mbox{\hyperlink{class_string}{String}} \&str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ez a fájl tartalmazza a \mbox{\hyperlink{class_string}{String}} osztály deklarációját és inline függvényeit. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_my_string_8h_a8d89d501f582c3a65df894dbd030bbcf}\label{_my_string_8h_a8d89d501f582c3a65df894dbd030bbcf}} 
+\index{MyString.h@{MyString.h}!operator+@{operator+}}
+\index{operator+@{operator+}!MyString.h@{MyString.h}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} operator+ (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Karakterhez sztringet fűz 
+\begin{DoxyParams}{Parameters}
+{\em ch} & -\/ karakter \\
+\hline
+{\em str} & -\/ \mbox{\hyperlink{class_string}{String}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+új \mbox{\hyperlink{class_string}{String}}, ami tartalmazza a karaktert és a sztringet egymás után 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_string_8h_ab6e568a9a1c6b06fca64efeeeeb4d1f5}\label{_my_string_8h_ab6e568a9a1c6b06fca64efeeeeb4d1f5}} 
+\index{MyString.h@{MyString.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!MyString.h@{MyString.h}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{string\+Out }\end{DoxyParamCaption})}
+
+kiír az ostream-\/re 
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ ostream típusú objektum \\
+\hline
+{\em string\+Out} & -\/ \mbox{\hyperlink{class_string}{String}}, amit kiírunk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_string_8h_afb72f7254c8be75f3fc771ab6303a2b6}\label{_my_string_8h_afb72f7254c8be75f3fc771ab6303a2b6}} 
+\index{MyString.h@{MyString.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!MyString.h@{MyString.h}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_string}{String}} \&}]{string\+In }\end{DoxyParamCaption})}
+
+Beolvas az istream-\/ről egy szót egy string-\/be. 
+\begin{DoxyParams}{Parameters}
+{\em is} & -\/ istream típusú objektum \\
+\hline
+{\em string\+In} & -\/ \mbox{\hyperlink{class_string}{String}}, amibe beolvas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is 
+\end{DoxyReturn}

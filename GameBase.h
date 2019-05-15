@@ -1,6 +1,10 @@
 #ifndef GAMEBASE_H
 #define GAMEBASE_H
 
+#ifdef _MSC_VER
+	#define _CRT_SECURE_NO_WARNINGS 1
+#endif
+
 #include <exception>
 
 /**

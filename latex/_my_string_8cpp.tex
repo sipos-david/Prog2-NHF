@@ -1,0 +1,51 @@
+\hypertarget{_my_string_8cpp}{}\section{My\+String.\+cpp File Reference}
+\label{_my_string_8cpp}\index{MyString.cpp@{MyString.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}memtrace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}My\+String.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_my_string_8cpp_ab6e568a9a1c6b06fca64efeeeeb4d1f5}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_string}{String}} \&string\+Out)
+\item 
+std\+::istream \& \mbox{\hyperlink{_my_string_8cpp_afb72f7254c8be75f3fc771ab6303a2b6}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_string}{String}} \&string\+In)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_string}{String}} osztály föggvényeinek definícióit tartalmazza 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_my_string_8cpp_ab6e568a9a1c6b06fca64efeeeeb4d1f5}\label{_my_string_8cpp_ab6e568a9a1c6b06fca64efeeeeb4d1f5}} 
+\index{MyString.cpp@{MyString.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!MyString.cpp@{MyString.cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{string\+Out }\end{DoxyParamCaption})}
+
+kiír az ostream-\/re 
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ ostream típusú objektum \\
+\hline
+{\em string\+Out} & -\/ \mbox{\hyperlink{class_string}{String}}, amit kiírunk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_my_string_8cpp_afb72f7254c8be75f3fc771ab6303a2b6}\label{_my_string_8cpp_afb72f7254c8be75f3fc771ab6303a2b6}} 
+\index{MyString.cpp@{MyString.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!MyString.cpp@{MyString.cpp}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_string}{String}} \&}]{string\+In }\end{DoxyParamCaption})}
+
+Beolvas az istream-\/ről egy szót egy string-\/be. 
+\begin{DoxyParams}{Parameters}
+{\em is} & -\/ istream típusú objektum \\
+\hline
+{\em string\+In} & -\/ \mbox{\hyperlink{class_string}{String}}, amibe beolvas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is 
+\end{DoxyReturn}

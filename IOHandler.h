@@ -1,6 +1,10 @@
 #ifndef IO_HANDLER_H
 #define IO_HANDLER_H
 
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS 1
+#endif
+
 #include "PlayerContainer.h"
 #include "SimulationLog.h"
 

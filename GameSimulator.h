@@ -1,10 +1,6 @@
 #ifndef GAME_SIMULATOR_H
 #define GAME_SIMULATOR_H
 
-#ifdef _MSC_VER
-	#define _CRT_SECURE_NO_WARNINGS 1
-#endif
-
 #include <ctime>
 
 #include "PlayerContainer.h"

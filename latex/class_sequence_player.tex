@@ -1,0 +1,60 @@
+\hypertarget{class_sequence_player}{}\section{Sequence\+Player Class Reference}
+\label{class_sequence_player}\index{SequencePlayer@{SequencePlayer}}
+
+
+{\ttfamily \#include $<$Sequence\+Player.\+h$>$}
+
+Inheritance diagram for Sequence\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sequence_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sequence_player_a5093f450feeaaedf64b9ee697173b56c}\label{class_sequence_player_a5093f450feeaaedf64b9ee697173b56c}} 
+{\bfseries Sequence\+Player} (const size\+\_\+t new\+Id, const \mbox{\hyperlink{class_string}{String}} \&new\+Name, const \mbox{\hyperlink{class_string}{String}} \&new\+Sequence)
+\item 
+\mbox{\Hypertarget{class_sequence_player_af037cac790dbb0b0590655bc6232be9b}\label{class_sequence_player_af037cac790dbb0b0590655bc6232be9b}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_sequence_player_a2835d6d3be94da3a61726c75dafc9a96}\label{class_sequence_player_a2835d6d3be94da3a61726c75dafc9a96}} 
+Move\+Type {\bfseries move} ()
+\item 
+void \mbox{\hyperlink{class_sequence_player_a59ae20c45eb565aa3161495d856005cb}{reset}} ()
+\item 
+\mbox{\Hypertarget{class_sequence_player_ac7468e35a6387f48185712fde5f444b8}\label{class_sequence_player_ac7468e35a6387f48185712fde5f444b8}} 
+\mbox{\hyperlink{class_string}{String}} {\bfseries get\+Sequence} () const
+\item 
+\mbox{\Hypertarget{class_sequence_player_a294c15ee1475a232b4c95e5732d2c3a9}\label{class_sequence_player_a294c15ee1475a232b4c95e5732d2c3a9}} 
+\mbox{\hyperlink{class_player_base}{Player\+Base}} $\ast$ {\bfseries copy} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Player\+Base-\/bõl leszármazott osztály. A heterogén kollekció része. Egy bizonyos szekvenci-\/át ismétel. Magát a szekvenciát egy Stringben tárolja (k, p, o) és belül követi, hogy éppen hol tart. Ha egy szekvenciának vége, akkor elölrõl kezdi. Van \mbox{\hyperlink{class_sequence_player_a59ae20c45eb565aa3161495d856005cb}{reset()}} függvénye amivel alaphely-\/zetbe állítható hogy elölrõl lehessen kezdni a szimulációt. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sequence_player_a59ae20c45eb565aa3161495d856005cb}\label{class_sequence_player_a59ae20c45eb565aa3161495d856005cb}} 
+\index{SequencePlayer@{SequencePlayer}!reset@{reset}}
+\index{reset@{reset}!SequencePlayer@{SequencePlayer}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Sequence\+Player\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Visszaállítja \char`\"{}eredeti\char`\"{} állapotába a példányt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sequence\+Player.\+h\item 
+Sequence\+Player.\+cpp\end{DoxyCompactItemize}

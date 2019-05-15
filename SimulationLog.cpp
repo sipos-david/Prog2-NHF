@@ -13,7 +13,7 @@ void SimulationLog::addPlayerLog(Player* newPlayer) {
 }
 
 void SimulationLog::resizeMatchLogs(size_t add) {
-	GameLog* newMatchLogs;
+	GameLog* newMatchLogs = nullptr;
 	bool succes = false;
 	while (!succes) {
 		try {
@@ -23,19 +23,18 @@ void SimulationLog::resizeMatchLogs(size_t add) {
 		catch (std::bad_alloc & ba) {
 			std::cerr << "SimulationLog::resizeMatchLogs : " << ba.what() << std::endl;
 			succes = false;
-			delete[] newMatchLogs;
 		}
 	}
-
-	for (size_t i = 0; i < lengthMatchLogs; i++)
-		newMatchLogs[i] = matchLogs[i];
+	if (newMatchLogs != nullptr)
+		for (size_t i = 0; i < lengthMatchLogs; i++)
+			newMatchLogs[i] = matchLogs[i];
 	delete[] matchLogs;
 	matchLogs = newMatchLogs;
 	this->lengthMatchLogs += add;
 }
 
 void SimulationLog::resizePlayerLogs(size_t add) {
-	PlayerLog* newPlayerLogs;
+	PlayerLog* newPlayerLogs = nullptr;
 	bool succes = false;
 	while (!succes) {
 		try {
@@ -45,12 +44,11 @@ void SimulationLog::resizePlayerLogs(size_t add) {
 		catch (std::bad_alloc & ba) {
 			std::cerr << "SimulationLog::resizePlayerLogs : " << ba.what() << std::endl;
 			succes = false;
-			delete[] newPlayerLogs;
 		}
 	}
-
-	for (size_t i = 0; i < lengthPlayerLogs; i++)
-		newPlayerLogs[i] = playerLogs[i];
+	if (newPlayerLogs != nullptr)
+		for (size_t i = 0; i < lengthPlayerLogs; i++)
+			newPlayerLogs[i] = playerLogs[i];
 	if (playerLogs != nullptr)
 		delete[] playerLogs;
 	playerLogs = newPlayerLogs;

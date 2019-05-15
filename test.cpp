@@ -1,4 +1,3 @@
-#define MEMTRACE
 #include "memtrace.h"
 #include "GameSimulator.h"
 

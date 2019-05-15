@@ -1,0 +1,38 @@
+\hypertarget{struct_game_log}{}\section{Game\+Log Struct Reference}
+\label{struct_game_log}\index{GameLog@{GameLog}}
+
+
+{\ttfamily \#include $<$Simulation\+Log.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_game_log_a0644a0e6b4885571ddd2bd7d97f052cb}\label{struct_game_log_a0644a0e6b4885571ddd2bd7d97f052cb}} 
+{\bfseries Game\+Log} (\mbox{\hyperlink{class_player}{Player}} $\ast$new\+Player\+One=nullptr, \mbox{\hyperlink{class_player}{Player}} $\ast$new\+Player\+Two=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_game_log_a77698fa01780c1cc5304b223dc754455}\label{struct_game_log_a77698fa01780c1cc5304b223dc754455}} 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ {\bfseries player\+One}
+\item 
+\mbox{\Hypertarget{struct_game_log_af7e349a3c5e8fd96c5ce8a0ba468192a}\label{struct_game_log_af7e349a3c5e8fd96c5ce8a0ba468192a}} 
+\mbox{\hyperlink{class_player}{Player}} $\ast$ {\bfseries player\+Two}
+\item 
+\mbox{\Hypertarget{struct_game_log_ad2843db8fc853eb585f65b3fe99d04a8}\label{struct_game_log_ad2843db8fc853eb585f65b3fe99d04a8}} 
+size\+\_\+t {\bfseries player\+One\+Wins}
+\item 
+\mbox{\Hypertarget{struct_game_log_a013513377802fa6f7b7a9d1f65053cb4}\label{struct_game_log_a013513377802fa6f7b7a9d1f65053cb4}} 
+size\+\_\+t {\bfseries player\+Two\+Wins}
+\item 
+\mbox{\Hypertarget{struct_game_log_a57312570c0fa723d6a8d23433eb8307e}\label{struct_game_log_a57312570c0fa723d6a8d23433eb8307e}} 
+size\+\_\+t {\bfseries draws}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Egy meccssorozat eredményei tárolja. A két egymás ellen álló játékost és a nyerésük és a döntetlenek számát. Az összes meccs száma ezekbõl már könnyen kiszámítható, ezért nem kell tárolni azt, hiszen csak össze kell adni õket, és ez megadja a pontos eredmény, mivel egy meccsnek csak pontosan ez a 3 kimenetele lehet. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulation\+Log.\+h\end{DoxyCompactItemize}

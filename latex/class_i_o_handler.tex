@@ -1,0 +1,190 @@
+\hypertarget{class_i_o_handler}{}\section{I\+O\+Handler Class Reference}
+\label{class_i_o_handler}\index{IOHandler@{IOHandler}}
+
+
+{\ttfamily \#include $<$I\+O\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_o_handler_aa4f17e99242bb5de1c1077c989f502d0}\label{class_i_o_handler_aa4f17e99242bb5de1c1077c989f502d0}} 
+{\bfseries I\+O\+Handler} (\mbox{\hyperlink{class_player_container}{Player\+Container}} \&new\+Container, \mbox{\hyperlink{class_simulation_log}{Simulation\+Log}} \&new\+Log)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_i_o_handler_a62078426dbc99383599595393871a785}{get\+From\+User\+Simulation\+Number}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_ad68aa200164dc95909d22897431a0ac2}{get\+From\+User\+Random\+Player}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_a5365d2485dff2b3b43940d22e67eff9e}{get\+From\+User\+Stone\+Player}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_aeefbc4a6e0da74ae33c20e6699f27f69}{get\+From\+User\+Paper\+Player}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_a83ce51105257f89775b451b0ecbacc87}{get\+From\+User\+Scissors\+Player}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_a659efa375edb21cacd100692f0caaa0d}{get\+From\+User\+Sequance\+Player}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_a84ed4b024f99614df0df930498fa4c8f}{list\+Match\+Logs}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_af4be5dd96e4c4b957b45f690fa658949}{list\+Player\+Logs}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_handler_a9a99666b56a4076218e34554bfb89847}{list\+All\+Players}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ez az osztály felelõs a program és ember kommunikációjának lebonyolításáért.
+
+Például a get\+From\+User… függvények bekérik a felhasználótól a megfelelõ adatot, majd ezt felhasználva a \mbox{\hyperlink{class_player_container}{Player\+Container}} felépíti a heterogén kollekciót.
+
+A \mbox{\hyperlink{class_i_o_handler_a84ed4b024f99614df0df930498fa4c8f}{list\+Match\+Logs()}} és a \mbox{\hyperlink{class_i_o_handler_af4be5dd96e4c4b957b45f690fa658949}{list\+Player\+Logs()}} kiírja a konzolba a játékosok és a meccsek eredmé-\/nyeit. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_o_handler_aeefbc4a6e0da74ae33c20e6699f27f69}\label{class_i_o_handler_aeefbc4a6e0da74ae33c20e6699f27f69}} 
+\index{IOHandler@{IOHandler}!getFromUserPaperPlayer@{getFromUserPaperPlayer}}
+\index{getFromUserPaperPlayer@{getFromUserPaperPlayer}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserPaperPlayer()}{getFromUserPaperPlayer()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::get\+From\+User\+Paper\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználótol a stantard inputra bekeri, hogy legyen-\/e papír játékos a szimulációban. Ha igen hozza adja a heterogén kollekcióhoz az új játékost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_ad68aa200164dc95909d22897431a0ac2}\label{class_i_o_handler_ad68aa200164dc95909d22897431a0ac2}} 
+\index{IOHandler@{IOHandler}!getFromUserRandomPlayer@{getFromUserRandomPlayer}}
+\index{getFromUserRandomPlayer@{getFromUserRandomPlayer}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserRandomPlayer()}{getFromUserRandomPlayer()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::get\+From\+User\+Random\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználótol a stantard inputra bekeri, hogy legyen-\/e random játékos a szimulációban. Ha igen hozza adja a heterogén kollekcióhoz az új játékost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a83ce51105257f89775b451b0ecbacc87}\label{class_i_o_handler_a83ce51105257f89775b451b0ecbacc87}} 
+\index{IOHandler@{IOHandler}!getFromUserScissorsPlayer@{getFromUserScissorsPlayer}}
+\index{getFromUserScissorsPlayer@{getFromUserScissorsPlayer}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserScissorsPlayer()}{getFromUserScissorsPlayer()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::get\+From\+User\+Scissors\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználótol a stantard inputra bekeri, hogy legyen-\/e olló játékos a szimulációban. Ha igen hozza adja a heterogén kollekcióhoz az új játékost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a659efa375edb21cacd100692f0caaa0d}\label{class_i_o_handler_a659efa375edb21cacd100692f0caaa0d}} 
+\index{IOHandler@{IOHandler}!getFromUserSequancePlayer@{getFromUserSequancePlayer}}
+\index{getFromUserSequancePlayer@{getFromUserSequancePlayer}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserSequancePlayer()}{getFromUserSequancePlayer()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::get\+From\+User\+Sequance\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználótol a stantard inputra bekeri, hogy legyen-\/e szekvencia játékos a szimulációban. Ha igen hozza adja a heterogén kollekcióhoz az új játékost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a62078426dbc99383599595393871a785}\label{class_i_o_handler_a62078426dbc99383599595393871a785}} 
+\index{IOHandler@{IOHandler}!getFromUserSimulationNumber@{getFromUserSimulationNumber}}
+\index{getFromUserSimulationNumber@{getFromUserSimulationNumber}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserSimulationNumber()}{getFromUserSimulationNumber()}}
+{\footnotesize\ttfamily size\+\_\+t I\+O\+Handler\+::get\+From\+User\+Simulation\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználó álltal a stantard inputra megadott számot adja vissza. -\/$>$ Game\+Simulator.\+simulation\+Number olvasása.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ size\+\_\+t -\/$>$ Game\+Simulator.\+simulation\+Number típusa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a5365d2485dff2b3b43940d22e67eff9e}\label{class_i_o_handler_a5365d2485dff2b3b43940d22e67eff9e}} 
+\index{IOHandler@{IOHandler}!getFromUserStonePlayer@{getFromUserStonePlayer}}
+\index{getFromUserStonePlayer@{getFromUserStonePlayer}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{getFromUserStonePlayer()}{getFromUserStonePlayer()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::get\+From\+User\+Stone\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A felhasználótol a stantard inputra bekeri, hogy legyen-\/e kõ játékos a szimulációban. Ha igen hozza adja a heterogén kollekcióhoz az új játékost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a9a99666b56a4076218e34554bfb89847}\label{class_i_o_handler_a9a99666b56a4076218e34554bfb89847}} 
+\index{IOHandler@{IOHandler}!listAllPlayers@{listAllPlayers}}
+\index{listAllPlayers@{listAllPlayers}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{listAllPlayers()}{listAllPlayers()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::list\+All\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A standard inputra kilistázza a szimulácó játékosait.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_a84ed4b024f99614df0df930498fa4c8f}\label{class_i_o_handler_a84ed4b024f99614df0df930498fa4c8f}} 
+\index{IOHandler@{IOHandler}!listMatchLogs@{listMatchLogs}}
+\index{listMatchLogs@{listMatchLogs}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{listMatchLogs()}{listMatchLogs()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::list\+Match\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A standard inputra kilistázza a szimulácó meccseinek eredményeit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_handler_af4be5dd96e4c4b957b45f690fa658949}\label{class_i_o_handler_af4be5dd96e4c4b957b45f690fa658949}} 
+\index{IOHandler@{IOHandler}!listPlayerLogs@{listPlayerLogs}}
+\index{listPlayerLogs@{listPlayerLogs}!IOHandler@{IOHandler}}
+\subsubsection{\texorpdfstring{listPlayerLogs()}{listPlayerLogs()}}
+{\footnotesize\ttfamily void I\+O\+Handler\+::list\+Player\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A standard inputra kilistázza a szimulácó játékosainak eredményeit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & nincs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ nincs 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+I\+O\+Handler.\+h\item 
+I\+O\+Handler.\+cpp\end{DoxyCompactItemize}
